@@ -1,0 +1,46 @@
+
+@import '../../css/colors.css';
+
+.SideBar {
+  flex: none;
+  width: 230px;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 0px 0px rgba(208, 209, 213, 0.5), 0 0px 0px 1px rgba(220, 221, 224, 0.4);
+  padding: 0.75rem 0;
+  height: auto;
+
+  &__Item {
+    line-height: 2.25rem;
+    height: 2.25rem;
+    padding: 0 1rem;
+    color: $c-fn-gray1;
+
+    &:hover {
+      color: $c-fn-gray3;
+      cursor: pointer;
+    }
+
+    &--Current {
+      font-weight: bold;
+      color: $c-fn-gray3;
+      background: $c-fn-gray4;
+    }
+
+    .typcn {
+      display: inline-block;
+      line-height: 100%;
+      width: 1.5rem;
+      height: 100%;
+      font-size: 1.25rem;
+      color: $c-fn-gray1;
+    }
+  }
+
+  &__Divider {
+    padding-bottom: 0.5rem;
+    margin: 0 1rem 0.5rem 1rem;
+    border-bottom: 1px solid #eee;
+  }
+}

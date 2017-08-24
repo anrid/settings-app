@@ -1,0 +1,28 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari 10", "ie 11"]
+      },
+      "useBuiltIns": true,
+      "debug": false
+    }]
+  ],
+  "plugins": [
+    ["inferno"],
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-webpack-loaders",
+          {
+            "config": "./webpack.config.test.js",
+            "verbose": true
+          }
+        ]
+      ]
+    }
+  }
+}

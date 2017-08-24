@@ -1,0 +1,45 @@
+
+.PopupMenu {
+  display: inline-block;
+  user-select: none;
+  position: relative;
+
+  &__Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
+  &__Header {
+
+  }
+
+  &__Content {
+    position: absolute;
+    z-index: 11;
+    top: 2.5rem;
+    left: 0rem;
+    flex: none;
+    width: 17rem;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25), 0 0 1px rgba(0,0,0,0.37);
+  }
+
+  &__Icon {
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__Item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    color: #666;
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+@import '../../css/colors.css';
+
+.LoadingPage {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  color: white;
+}

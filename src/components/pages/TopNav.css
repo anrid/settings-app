@@ -1,0 +1,104 @@
+
+.TopNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  background: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 0px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.05);
+
+  &__Inner {
+    min-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__Section {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__Section--Left {
+    justify-content: flex-start;
+  }
+
+  &__Section--Center {
+    justify-content: center;
+  }
+
+  &__Section--Right {
+    justify-content: flex-end;
+  }
+
+  &__Logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-position: -20px 0;
+    cursor: pointer;
+    background-image: url(https://static-ec4.thefancy.com/_static_gen/_ui/images/normal/header_white.4f2a98e3ef48.png);
+    background-size: 180px 50px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.9;
+  }
+
+  &__Menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__MenuItem {
+    cursor: pointer;
+    color: #888;
+
+    i.typcn {
+      display: inline-block;
+      font-size: 1.4rem;
+      width: 2rem;
+      text-align: center;
+    }
+
+    & + & {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      color: rgba(82,91,101,1);
+    }
+  }
+
+  &__Search {
+    border: 1px solid #dedfe0;
+    background: #f2f2f2;
+    border-radius: 3px;
+    width: 220px;
+
+    i.typcn {
+      line-height: 1;
+      height: 27px;
+      color: #aaa;
+      padding: 0 0 0 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    input {
+      width: auto;
+      border: 0;
+      padding: 0 0.25rem 0 0.25rem;
+      outline: none;
+      background-color: transparent;
+      height: 27px;
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+  }
+}

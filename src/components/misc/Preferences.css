@@ -1,0 +1,100 @@
+
+@import '../../css/colors.css';
+
+.Preferences {
+  flex: 1 1;
+  margin-left: 1.25rem;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 0px 0px rgba(208, 209, 213, 0.5), 0 0px 0px 1px rgba(220, 221, 224, 0.4);
+
+  &__Header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+    height: 4rem;
+    padding: 0 1rem;
+    color: $c-fn-gray2;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__Block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+
+    & + & {
+      border-top: 1px solid #f2f2f2;
+    }
+
+    &__Header {
+      min-width: 200px;
+      font-size: 1.15rem;
+      color: $c-fn-gray1;
+    }
+  }
+
+  &__FormLabel {
+    display: inline-block;
+    color: $c-fn-gray2;
+    height: 1.5rem;
+    line-height: 1.55rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  &__FormField {
+    margin-bottom: 1.5rem;
+
+    select {
+      width: 322px;
+      background-color: #F8F8F8;
+      border: 1px solid #d1d5d7;
+      border-radius: 2px;
+      padding: 0.25rem 0.5rem;
+      height: 2.5rem;
+      line-height: 2rem;
+      appearance: none;
+      outline-color: $c-blue200;
+      outline-width: 2px;
+      background-image: url(https://static-ec4.thefancy.com/_static_gen/_ui/images/normal/selectbox-boxes2.890a0dcad836.gif);
+      background-size: 18px 22px;
+      background-repeat: no-repeat;
+      background-position: center right;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input[type="radio"] {
+      & + span {
+        margin: 0 2.5rem 0 0.5rem;
+        .typcn {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    select:focus, input:focus, textarea:focus {
+      border-color: #acbdcb !important;
+      box-shadow: 0 0 0 2px rgba(78,133,184,0.17) !important;
+      background-color: #fff !important;
+    }
+  }
+
+  &__FormHelp {
+    color: $c-fn-gray5;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    max-width: 400px;
+    margin: 0.3rem 0 1rem 0;
+    a {
+      color: #4978b3;
+      text-decoration: none;
+    }
+  }
+}
