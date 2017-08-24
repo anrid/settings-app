@@ -11,18 +11,5 @@
   "plugins": [
     ["inferno"],
     ["transform-object-rest-spread", { "useBuiltIns": true }]
-  ],
-  "env": {
-    "test": {
-      "plugins": [
-        [
-          "babel-plugin-webpack-loaders",
-          {
-            "config": "./webpack.config.test.js",
-            "verbose": true
-          }
-        ]
-      ]
-    }
-  }
+  ]
 }

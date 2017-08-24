@@ -15,7 +15,7 @@ test('Setup tests', async t => {
 const _user = {
 
 }
-test('Signup with bad data should fail', t => {
+test('Signup fails with bad data', t => {
   request(server)
     .post('/signup')
     .field('email', 'ace@base.se')
@@ -58,6 +58,21 @@ test('Signin happens when an email and password is the same as a signed up user'
       t.equal(res.body.profile.email, 'ace@base.se', 'should have correct email address')
       t.ok(res.body.profile.lastSeen, 'should have been seen before')
       _user.accessToken = res.body.accessToken
+      t.end()
+    })
+})
+
+test('Signin fails with wrong password', async t => {
+  request(server)
+    .post('/signup')
+    .field('email', 'ace@base.se')
+    .field('password', '1234567890')
+    .expect('Content-Type', /json/)
+    .expect(401)
+    .end((err, res) => {
+      t.error(err, 'should not produce an error')
+      t.equal(res.body.code, 'Unauthorized', 'should have Unauthorized error code')
+      t.ok(res.body.message.includes('Invalid email or password'), 'should fail to login because the password is wrong')
       t.end()
     })
 })
