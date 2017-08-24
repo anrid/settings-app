@@ -6,3 +6,9 @@ I created this version as an example solution to show those who already complete
 
 You know who you are ;-)
 
+### Usage
+
+```bash
+$ yarn install
+$ yarn start
+```
